@@ -21,6 +21,9 @@ const studentSchema = new schema({
     },
     phone: {
         type: Number
+    },
+    profilePhoto:{
+        type:String
     }
 }, { timeStamps: true });
 
