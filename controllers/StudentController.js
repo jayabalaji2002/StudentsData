@@ -62,14 +62,24 @@ const store = (req, res, next) => {
 //     return res.json({ message: "Employee must be under 20 years old" });
 //   }
 
-  if (req.files) {
-    let path = "";
-    req.files.forEach(function (files, index, arr) {
-      path = path + files.path + ",";
-    });
-    path = path.substring(0, path.lastIndexOf(","));
-    student.profilePhoto = path;
-  }
+
+//  this code for multiple image add
+  // if (req.files) {
+  //   let path = "";
+  //   req.files.forEach(function (files, index, arr) {
+  //     path = path + files.path + ",";
+  //   });
+  //   path = path.substring(0, path.lastIndexOf(","));
+    // student.profilePhoto = path;
+  // }
+
+// This code for single image add
+
+if(req.file){
+  student.profilePhoto = req.file.path
+}
+
+
   student
     .save()
     .then((response) => {
