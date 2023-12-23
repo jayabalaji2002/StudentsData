@@ -79,7 +79,6 @@ if(req.file){
   student.profilePhoto = req.file.path
 }
 
-
   student
     .save()
     .then((response) => {
