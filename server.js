@@ -2,6 +2,7 @@ const express = require('express')
 const morgan = require('morgan')
 const mongoose = require('mongoose')
 const bodyParser = require('body-parser')
+const cors = require('cors')
 
 
 const StudentRoute = require('./routes/studentee')
@@ -27,6 +28,10 @@ app.use(bodyParser.urlencoded({extended:true}))
 app.use(bodyParser.json())
 
 app.use('/uploads',express.static('uploads'))
+
+app.use(cors())
+// whenever we pass data from FE to our server side so that will be transferred to JSON Format
+app.use(express.json())
 
 const PORT = process.env.PORT || 5000
 
