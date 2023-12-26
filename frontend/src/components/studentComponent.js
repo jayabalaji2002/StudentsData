@@ -44,9 +44,10 @@ const StudentComponent = () => {
             {students.map(student => (
               <tr key={student._id}>
                 <td>
-                  {student.profilePhoto && (
-                    <img src={student.profilePhoto} alt={`${student.firstName}`} style={{ maxWidth: '100%', maxHeight: '100%' }} />
-                  )}
+                  
+                    {console.log("Profile Photo URL:", student.profilePhoto)}
+                    <img src={student.profilePhoto} alt={`${student.firstName}`} style={{ width:"50px", weight: "50px" }} />
+                  
                 </td>
                 <td>{`${student.firstName} ${student.lastName}`}</td>
                 <td>{student.email}</td>
