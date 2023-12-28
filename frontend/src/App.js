@@ -1,12 +1,14 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-import StudentComponent from "./components/studentComponent";
+// import StudentComponent from "./components/studentComponent";
+import Routes from './routes/route';
 
 
 function App() {
   return (
     <div>
-      <StudentComponent/>
+      <Routes/>
+      {/* <StudentComponent/> */}
     </div>
   );
 }
