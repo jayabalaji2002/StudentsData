@@ -10,6 +10,7 @@ router.post('/store',upload.single('profilePhoto'), StudentController.store)
 router.post('/update',StudentController.update)
 router.post('/delete',StudentController.destroy)
 
+
 module.exports = router
 
 
