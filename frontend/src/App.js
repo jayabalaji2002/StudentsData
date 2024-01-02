@@ -1,7 +1,7 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 // import StudentComponent from "./components/studentComponent";
-import Routes from './routes/route';
+import Routes from '../src/routes/route';
 
 
 function App() {

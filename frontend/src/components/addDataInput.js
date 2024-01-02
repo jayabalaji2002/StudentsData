@@ -1,23 +1,23 @@
 import React, { useState } from "react";
 
-const Trail = () => {
-  const [newTrailId, setNewTrailId] = useState("");
-  const [newTrailName, setNewTrailName] = useState("");
-  const [newStartDate, setNewStartDate] = useState("");
-  const [newEndDate, setNewEndDate] = useState("");
-  const [newNoOfPatients, setNewNoOfPatients] = useState("");
-  const [newAdvanceMedication, setNewAdvanceMedication] = useState("");
-  const [newNotes, setNewNotes] = useState("");
+const addData = () => {
+  // const [newTrailId, setNewTrailId] = useState("");
+  const [newFirstName, setNewFirstName] = useState("");
+  const [newLastDate, setNewLastDate] = useState("");
+  const [newFatherName, setNewFatherName] = useState("");
+  const [newEmail, setNewEmail] = useState("");
+  const [newPhone, setNewPhone] = useState("");
+  const [newAge, setNewAge] = useState("");
 
   const createNewData = () => {
     const newData = {
-      trailid: newTrailId,
-      trailname: newTrailName,
-      startdate: newStartDate,
-      enddate: newEndDate,
-      noOfpatients: newNoOfPatients,
-      advancemedication: newAdvanceMedication,
-      notes: newNotes,
+      // trailid: newTrailId,
+      firstName: newFirstName,
+      lastName: newLastDate,
+      fatherName: newFatherName,
+      email: newEmail,
+      phone: newPhone,
+      age: newAge,
     };
 
     fetch("http://localhost:5000/api/student/store", {
@@ -38,51 +38,51 @@ const Trail = () => {
 
   return (
     <div>
-      <input
+      {/* <input
         type="text"
         value={newTrailId}
         onChange={(e) => setNewTrailId(e.target.value)}
         placeholder="Trail ID"
+      /> */}
+      <input
+        type="text"
+        value={newFirstName}
+        onChange={(e) => setNewFirstName(e.target.value)}
+        placeholder="First Name"
       />
       <input
         type="text"
-        value={newTrailName}
-        onChange={(e) => setNewTrailName(e.target.value)}
-        placeholder="Trail Name"
+        value={newLastDate}
+        onChange={(e) => setNewLastDate(e.target.value)}
+        placeholder="Last Name"
       />
       <input
         type="text"
-        value={newStartDate}
-        onChange={(e) => setNewStartDate(e.target.value)}
-        placeholder="Start Date"
+        value={newFatherName}
+        onChange={(e) => setNewFatherName(e.target.value)}
+        placeholder="Father's Name"
       />
       <input
         type="text"
-        value={newEndDate}
-        onChange={(e) => setNewEndDate(e.target.value)}
-        placeholder="End Date"
+        value={newEmail}
+        onChange={(e) => setNewEmail(e.target.value)}
+        placeholder="ABC@gmail.com"
       />
       <input
         type="text"
-        value={newNoOfPatients}
-        onChange={(e) => setNewNoOfPatients(e.target.value)}
-        placeholder="Number of Patients"
+        value={newPhone}
+        onChange={(e) => setNewPhone(e.target.value)}
+        placeholder="(9677493459)"
       />
       <input
         type="text"
-        value={newAdvanceMedication}
-        onChange={(e) => setNewAdvanceMedication(e.target.value)}
-        placeholder="Advanced Medication"
-      />
-      <input
-        type="text"
-        value={newNotes}
-        onChange={(e) => setNewNotes(e.target.value)}
-        placeholder="Notes"
+        value={newAge}
+        onChange={(e) => setNewAge(e.target.value)}
+        placeholder="18"
       />
       <button onClick={createNewData}>Create Data</button>
     </div>
   );
 };
 
-export default Trail;
+export default addData;

@@ -4,7 +4,6 @@ const mongoose = require('mongoose')
 const bodyParser = require('body-parser')
 const cors = require('cors')
 
-
 const StudentRoute = require('./routes/studentee')
 
 mongoose.connect('mongodb://localhost:27017/studentData',{useNewUrlParser: true,useUnifiedTopology:true})

@@ -33,8 +33,9 @@ const StudentComponent = () => {
         <table className="table">
           <thead>
             <tr>
-              <th scope="col">Photo</th>
+              {/* <th scope="col">Photo</th> */}
               <th scope="col">Name</th>
+              <th scope="col">Father's Name</th>
               <th scope="col">Email</th>
               <th scope="col">Phone</th>
               <th scope="col">Age</th>
@@ -43,13 +44,15 @@ const StudentComponent = () => {
           <tbody>
             {students.map(student => (
               <tr key={student._id}>
-                <td>
+                {/* <td>
                   
                     {console.log("Profile Photo URL:", student.profilePhoto)}
                     <img src={student.profilePhoto} alt={`${student.firstName}`} style={{ width:"50px", weight: "50px" }} />
                   
-                </td>
-                <td>{`${student.firstName} ${student.lastName}`}</td>
+                </td> */}
+                <td>{student.firstName}</td>
+                <td>{student.lastName}</td>
+                <td>{student.fatherName}</td>
                 <td>{student.email}</td>
                 <td>{student.phone}</td>
                 <td>{student.age}</td>
