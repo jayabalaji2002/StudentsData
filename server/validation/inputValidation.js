@@ -6,7 +6,7 @@ const register = joi.object({
     lastName:joi.string().length(1).required(),
     fatherName:joi.required(),
     email:joi.string().required().email({ minDomainSegments: 2, tlds: { allow: ['com', 'net'] } }).lowercase(),
-    age:joi.required(),
+    age:joi.number().integer().min(10).max(28).required(),
     // phone:joi.number().length(10).pattern(/^[0-9]+$/).required(),
     phone:joi.number().integer().min(1900).max(9999999999)
     // password:joi.string().pattern(new RegExp('^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{6,12}$')).required()
