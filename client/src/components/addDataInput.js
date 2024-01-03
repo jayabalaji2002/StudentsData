@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { Form, Button } from "react-bootstrap";
+
 
 const AddData = () => {
   // const [newTrailId, setNewTrailId] = useState("");

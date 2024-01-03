@@ -5,7 +5,7 @@ const schema = mongoose.Schema
 const studentSchema = new schema({
 
     firstName: {
-        type: String
+        type: String,
     },
     lastName: {
         type: String
